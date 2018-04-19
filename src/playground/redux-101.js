@@ -25,7 +25,6 @@ const store = createStore((state = { count: 0 }, action) => {
   }
 });
 
-// stop subscription
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
 });
