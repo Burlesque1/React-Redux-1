@@ -5,7 +5,7 @@ import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } fro
 
 class ExpenseListFilters extends React.Component {
   state = {
-    calendarFocused: true
+    calendarFocused: null
   };
   onDatesChange = ({ startDate, endDate }) => {
     this.props.dispatch(setStartDate(startDate));
