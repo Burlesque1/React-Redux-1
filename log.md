@@ -44,4 +44,6 @@ app.get('*', (req, res) => {
 
 136. deploy to heroku
 
-137. 
+137. deploy to heroku 2 <br>
+webpack-dev-server runs some virtual element not write into file
+node server runs as the real server
