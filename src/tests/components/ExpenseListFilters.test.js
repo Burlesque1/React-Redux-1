@@ -42,8 +42,6 @@ test('should handle text change', () => {
     target: { value }
   }); 
   expect(setTextFilter).toHaveBeenLastCalledWith(value); // check the most recent call
-  console.log(wrapper.state('calendarFocused'));
-  expect(wrapper.state('calendarFocused')).toBe(null);
 });
 
 test('should sort by date', () => {

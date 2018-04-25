@@ -15,6 +15,7 @@ mapDispatchToProps = (dispatch) // not necessary to pass props
 127. testing ExpenseListFilters <br>
 get from store and render via connect as higher order component, data inside props <br>
 modify dispatch -> class based component -> mapDispatchToProps -> setup let and beforeEach <br>
+simulate vs .prop events are built-in
 ```
 ExpenseForm
 1. accesses states so cannot change data through setProps

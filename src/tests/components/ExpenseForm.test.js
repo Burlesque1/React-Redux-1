@@ -26,7 +26,7 @@ test('should render ExpenseForm correctly with expense data', () => {
 });
 
 test('should render error for invalid form submission', () => {
-  wrapper = shallow(<ExpenseForm />)
+  wrapper = shallow(<ExpenseForm />)  // initialize an empty ExpenseForm
   expect(wrapper).toMatchSnapshot();
   wrapper.find('form').simulate('submit', {
     preventDefault: () => { }
@@ -53,6 +53,10 @@ test('should set note on textarea change', () => {
 
 test('should set amount if valid input', () => {
   const value = '23.50';
+  // same as simulate
+  // wrapper.find('input').at(1).prop('onChange')( {
+  //   target: { value }
+  // });
   wrapper.find('input').at(1).simulate('change', {
     target: { value }
   });
