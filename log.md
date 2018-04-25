@@ -47,3 +47,7 @@ app.get('*', (req, res) => {
 137. deploy to heroku 2 <br>
 webpack-dev-server runs some virtual element not write into file
 node server runs as the real server
+
+138. 
+TDD write test at first despite it would fail <br>
+then write code <br>
