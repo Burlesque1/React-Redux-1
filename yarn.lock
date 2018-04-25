@@ -37,7 +37,7 @@ acorn@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
-airbnb-prop-types@^2.5.4:
+airbnb-prop-types@^2.8.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/airbnb-prop-types/-/airbnb-prop-types-2.9.0.tgz#fd440594b1b0cdddf487f62e007d0dba909f6beb"
   dependencies:
@@ -270,7 +270,7 @@ async@^2.1.2, async@^2.1.5:
   dependencies:
     lodash "^4.14.0"
 
-async@^2.1.4:
+async@^2.1.4, async@^2.4.1:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -1552,7 +1552,7 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
-consolidated-events@^1.0.1:
+consolidated-events@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/consolidated-events/-/consolidated-events-1.1.1.tgz#25395465b35e531395418b7bbecb5ecaf198d179"
 
@@ -2380,6 +2380,15 @@ extglob@^2.0.4:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+extract-text-webpack-plugin@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
+  dependencies:
+    async "^2.4.1"
+    loader-utils "^1.1.0"
+    schema-utils "^0.3.0"
+    webpack-sources "^1.0.1"
 
 extsprintf@1.0.2:
   version "1.0.2"
@@ -4093,11 +4102,7 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-moment@2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-
-moment@>=1.6.0:
+moment@>=1.6.0, moment@^2.22.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
@@ -5071,19 +5076,19 @@ react-addons-shallow-compare@15.6.0:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-dates@12.3.0:
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-12.3.0.tgz#430e5736bc655a21d9e40ab24b07b0d17d0df80a"
+react-dates@12.7.0:
+  version "12.7.0"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-12.7.0.tgz#58048317c627d6406376aedbe7aed05bed18d319"
   dependencies:
-    airbnb-prop-types "^2.5.4"
+    airbnb-prop-types "^2.8.1"
     classnames "^2.2.5"
-    consolidated-events "^1.0.1"
+    consolidated-events "^1.1.0"
     is-touch-device "^1.0.1"
     lodash "^4.1.1"
     object.assign "^4.0.4"
     object.values "^1.0.4"
     prop-types "^15.5.10"
-    react-moment-proptypes "^1.4.0"
+    react-moment-proptypes "^1.5.0"
     react-portal "^3.1.0"
 
 react-dom-factories@^1.0.0:
@@ -5107,7 +5112,7 @@ react-modal@2.2.2:
     prop-types "^15.5.10"
     react-dom-factories "^1.0.0"
 
-react-moment-proptypes@^1.4.0:
+react-moment-proptypes@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/react-moment-proptypes/-/react-moment-proptypes-1.5.0.tgz#4a448cd6479efc5dd509283f361f3753c3abe60e"
   dependencies:

@@ -26,6 +26,12 @@ ExpenseListFilter
 2. change state data so wrapper.state.toBe works
 ```
 
-128. production webpack <br>
+133. production webpack <br>
 change webpack.config.js from obj to function <br>
-change build command in package.json 
+change build command in package.json <br>
+extract source map from bundle.js to reduce the size 
+
+134. extract CSS files
+???
+
+135. a production web server with express
