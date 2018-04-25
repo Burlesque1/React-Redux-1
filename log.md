@@ -25,3 +25,7 @@ ExpenseListFilter
 1. uses .props.filter so setProps works
 2. change state data so wrapper.state.toBe works
 ```
+
+128. production webpack <br>
+change webpack.config.js from obj to function <br>
+change build command in package.json 
