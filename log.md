@@ -12,3 +12,6 @@ jest.fn() as fake func
 ```
 mapDispatchToProps = (dispatch) // not necessary to pass props
 ```
+127. testing ExpenseListFilters <br>
+get from store and render via connect as higher order component, data inside props
+modify dispatch -> class based component -> mapDispatchToProps -> setup let and beforeEach
