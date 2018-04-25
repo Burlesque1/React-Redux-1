@@ -32,6 +32,12 @@ change build command in package.json <br>
 extract source map from bundle.js to reduce the size 
 
 134. extract CSS files
-???
+??? <br>
+difference from dev-server and live-server
 
-135. a production web server with express
+135. a production web server with express <br>
+```
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+```
