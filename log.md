@@ -13,5 +13,14 @@ jest.fn() as fake func
 mapDispatchToProps = (dispatch) // not necessary to pass props
 ```
 127. testing ExpenseListFilters <br>
-get from store and render via connect as higher order component, data inside props
-modify dispatch -> class based component -> mapDispatchToProps -> setup let and beforeEach
+get from store and render via connect as higher order component, data inside props <br>
+modify dispatch -> class based component -> mapDispatchToProps -> setup let and beforeEach <br>
+```
+ExpenseForm
+1. accesses states so cannot change data through setProps
+2. change store data so wrapper.state has no data
+
+ExpenseListFilter 
+1. uses .props.filter so setProps works
+2. change state data so wrapper.state.toBe works
+```

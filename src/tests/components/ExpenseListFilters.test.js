@@ -41,8 +41,9 @@ test('should handle text change', () => {
   wrapper.find('input').simulate('change', {
     target: { value }
   }); 
-  expect(setTextFilter).toHaveBeenLastCalledWith(value);
-  // expect(wrapper.state('text')).toBe(text);
+  expect(setTextFilter).toHaveBeenLastCalledWith(value); // check the most recent call
+  console.log(wrapper.state('calendarFocused'));
+  expect(wrapper.state('calendarFocused')).toBe(null);
 });
 
 test('should sort by date', () => {
