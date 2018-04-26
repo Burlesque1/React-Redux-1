@@ -72,3 +72,10 @@ const onValueChange = database.ref().on('value', (snapshot) => {
 });
 database.ref().off(onValueChange);
 ```
+
+152. Asynchronous Redux Actions <br>
+component should not be aware of data flow and should be concerned with presentation of information and basic user interaction
++ component calls action generator
++ action generator returns object / function
++ component dispatches object /function
++ redux store changes / function runs(has the ability to dispatch other actions and do whatever it wants)
