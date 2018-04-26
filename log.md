@@ -79,3 +79,5 @@ component should not be aware of data flow and should be concerned with presenta
 + action generator returns object / function
 + component dispatches object /function
 + redux store changes / function runs(has the ability to dispatch other actions and do whatever it wants)
+
+<br> export default ???
