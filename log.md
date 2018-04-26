@@ -48,6 +48,10 @@ app.get('*', (req, res) => {
 webpack-dev-server runs some virtual element not write into file
 node server runs as the real server
 
-138. 
+138. fdsaf <br>
 TDD write test at first despite it would fail <br>
 then write code <br>
+
+142. getting firebase
++ use realtime database
++ use authentication system
