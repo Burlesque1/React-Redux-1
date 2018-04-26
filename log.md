@@ -81,3 +81,6 @@ component should not be aware of data flow and should be concerned with presenta
 + redux store changes / function runs(has the ability to dispatch other actions and do whatever it wants)
 
 <br> export default ???
+
+153. test add expense <br>
+moment.format would change time zone result in inconsistency on travis
