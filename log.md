@@ -55,3 +55,20 @@ then write code <br>
 142. getting firebase
 + use realtime database
 + use authentication system
+
+146. remove <br>
+ref().set(null) <=> ref().remove()
+
+147. update data <br>
+'xxx/xxx' to access sub attribute
+
+148. fetching data <br>
+use once() or on() to fetch data
+```
+const onValueChange = database.ref().on('value', (snapshot) => {
+  console.log(snapshot.val());
+}, (e) => {
+  console.log('Error with data fetching', e);
+});
+database.ref().off(onValueChange);
+```
