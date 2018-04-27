@@ -79,8 +79,9 @@ component should not be aware of data flow and should be concerned with presenta
 + action generator returns object / function
 + component dispatches object /function
 + redux store changes / function runs(has the ability to dispatch other actions and do whatever it wants)
-
+<br> use redux-thunk to provide middleware
 <br> export default ???
 
-153. test add expense <br>
-moment.format would change time zone result in inconsistency on travis
+153. test add expense 
+<br> moment.format would change time zone result in inconsistency on travis
+<br> import will automaticlly run the file
