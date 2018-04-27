@@ -35,26 +35,26 @@ test('should setup add expense action object with provided values', () => {
 
 test('should add expense to database and store', (done) => {
   const store = createMockStore({});
-  // const expenseData = {
-  //   description: 'Mouse',
-  //   amount: 3000,
-  //   note: 'This one is better',
-  //   createdAt: 1000
-  // };
+  const expenseData = {
+    description: 'Mouse',
+    amount: 3000,
+    note: 'This one is better',
+    createdAt: 1000
+  };
 
-  store.dispatch(startAddExpense(expenses[0])).then(() => {
+  store.dispatch(startAddExpense(expenseData)).then(() => {
     const actions = store.getActions();
     expect(actions[0]).toEqual({
       type: 'ADD_EXPENSE',
-      expense: {
+      expense: { 
         id: expect.any(String),
-        ...expenses[0]
+        ...expenseData
       } 
     });
 
     return database.ref(`expenses/${actions[0].expense.id}`).once('value');
   }).then((snapshot) => {
-    expect(snapshot.val()).toEqual(expenses[0]);
+    expect(snapshot.val()).toEqual(expenseData);
     done();
   });
 });
