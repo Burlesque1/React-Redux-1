@@ -22,6 +22,7 @@ export const startAddExpense = (expenseData = {}) => {
     } = expenseData;
     const expense = { description, note, amount, createdAt };
 
+    // load from database and then add into store
     return database.ref('expenses').push(expense).then((ref) => {
       dispatch(addExpense({
         ...expense,
@@ -43,3 +44,27 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+// return obj should add ()
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+export const startSetExpenses = () => {  
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+      snapshot.forEach(element => {
+        expenses.push({
+          id: element.key,
+          ...element.val()
+        });
+      });      
+
+      dispatch(setExpenses(expenses));
+    }).catch((e) => {
+      console.log(e);
+    });
+  };
+};

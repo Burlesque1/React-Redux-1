@@ -85,3 +85,16 @@ component should not be aware of data flow and should be concerned with presenta
 153. test add expense 
 <br> moment.format would change time zone result in inconsistency on travis
 <br> import will automaticlly run the file
+
+155. creating separate test databse
+<br> webpack.config.js works for server side and should not be passed to client side so that need to manully pass process.env.FIREBASE_XXX using defined plugin
+
+157. feching expenses
+should not fetch data via component / create new 
+```
+// add ()
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+```
