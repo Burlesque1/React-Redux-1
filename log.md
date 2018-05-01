@@ -139,3 +139,7 @@ use <div>
 
 173. styling summary
 <br> style modifier
+
+175. styling input
+<br> universal selector
+<br> @extend inherit features 
