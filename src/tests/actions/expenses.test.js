@@ -49,16 +49,16 @@ test('should remove the expense from firebase', (done) => {
 })
 
 
-test('should setup edit expense action object', () => {
-  const action = editExpense('123abc', { note: 'New note value' });
-  expect(action).toEqual({
-    type: 'EDIT_EXPENSE',
-    id: '123abc',
-    updates: {
-      note: 'New note value'
-    }
-  });
-});
+// test('should setup edit expense action object', () => {
+//   const action = editExpense('123abc', { note: 'New note value' });
+//   expect(action).toEqual({
+//     type: 'EDIT_EXPENSE',
+//     id: '123abc',
+//     updates: {
+//       note: 'New note value'
+//     }
+//   });
+// });
 
 test('should update expense from firebase', (done) => {
   const store = createMockStore({});

@@ -98,3 +98,4 @@ export const setExpenses = (expenses) => ({
   expenses
 });
 ```
+startXXXExpense will get called internally by redux and it gets called with dispatch

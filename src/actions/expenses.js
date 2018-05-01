@@ -13,7 +13,7 @@ export const addExpense = (expense) => ({
 });
 
 export const startAddExpense = (expenseData = {}) => {
-  return (dispatch) => {
+  return (dispatch) => { // this function will get called internally by redux and it gets called with dispatch
     const {
       description = '',
       note = '',  
