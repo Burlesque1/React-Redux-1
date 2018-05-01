@@ -100,5 +100,19 @@ export const setExpenses = (expenses) => ({
 ```
 startXXXExpense will get called internally by redux and it gets called with dispatch
 
-165. autu  
+165. the auth reducer
 <br> implicit login and logout should also update redux store, dispatch login and logout outside startXXX 
+
+167. public only routes
+```
+                authenticated           not
+publicRoutes    redirect to '/'         display
+privateRoutes   display                 redirect to '/'
+
+// app.js
+// not necessary to set '/' as public routes
+// this would redirect to '/' when logged in
+if(history.location.pathname === '/'){ 
+  history.push('/dashboard');
+}
+```
