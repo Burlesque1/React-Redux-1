@@ -1,11 +1,6 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
 
-// component calls action generator
-// action generator returns object
-// component dispatches object
-// redux store changes
-
 // ADD_EXPENSE
 export const addExpense = (expense) => ({
   type: 'ADD_EXPENSE',
@@ -13,20 +8,20 @@ export const addExpense = (expense) => ({
 });
 
 export const startAddExpense = (expenseData = {}) => {
-  return (dispatch) => { // this function will get called internally by redux and it gets called with dispatch
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     const {
       description = '',
-      note = '',  
+      note = '',
       amount = 0,
       createdAt = 0
     } = expenseData;
     const expense = { description, note, amount, createdAt };
 
-    // load from database and then add into store
-    return database.ref('expenses').push(expense).then((ref) => {
+    return database.ref(`users/${uid}/expenses`).push(expense).then((ref) => {
       dispatch(addExpense({
-        ...expense,
-        id: ref.key
+        id: ref.key,
+        ...expense
       }));
     });
   };
@@ -39,12 +34,13 @@ export const removeExpense = ({ id } = {}) => ({
 });
 
 export const startRemoveExpense = ({ id } = {}) => {
-  return (dispatch) => { // dispatch gets passed by redux library
-    return database.ref(`expenses/${id}`).remove().then(() => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
       dispatch(removeExpense({ id }));
-    })
-  }
-}
+    });
+  };
+};
 
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
@@ -54,33 +50,34 @@ export const editExpense = (id, updates) => ({
 });
 
 export const startEditExpense = (id, updates) => {
-  return (dispatch) => {
-    return database.ref(`expenses/${id}`).update(updates).then(() => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
       dispatch(editExpense(id, updates));
-    })
-  }
-}
+    });
+  };
+};
 
-// return obj should add ()
+// SET_EXPENSES
 export const setExpenses = (expenses) => ({
   type: 'SET_EXPENSES',
   expenses
 });
 
-export const startSetExpenses = () => {  
-  return (dispatch) => {
-    return database.ref('expenses').once('value').then((snapshot) => {
+export const startSetExpenses = () => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
       const expenses = [];
-      snapshot.forEach(element => {
+
+      snapshot.forEach((childSnapshot) => {
         expenses.push({
-          id: element.key,
-          ...element.val()
+          id: childSnapshot.key,
+          ...childSnapshot.val()
         });
-      });      
+      });
 
       dispatch(setExpenses(expenses));
-    }).catch((e) => {
-      console.log(e);
     });
   };
 };

@@ -116,3 +116,13 @@ if(history.location.pathname === '/'){
   history.push('/dashboard');
 }
 ```
+
+168. private firebase data
+<br> getState returns all the reducers
+<br> publicRoutes help when addExpense
+```
+// this not work when somewhere else push('/')
+if(history.location.pathname === '/'){ 
+  history.push('/dashboard');
+}
+```
