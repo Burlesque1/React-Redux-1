@@ -126,3 +126,6 @@ if(history.location.pathname === '/'){
   history.push('/dashboard');
 }
 ```
+
+171. styling login page
+<br> 100vh - 100% viewport height, cover
