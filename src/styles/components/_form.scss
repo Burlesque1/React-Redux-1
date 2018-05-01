@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  >* { // select all children
+  >* {
     margin-bottom: $m-size;
   }
 }
