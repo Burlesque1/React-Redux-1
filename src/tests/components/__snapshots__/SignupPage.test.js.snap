@@ -35,6 +35,13 @@ exports[`should correctly render SignupPage 1`] = `
       >
         Signup
       </button>
+      <Link
+        className="list-item"
+        replace={false}
+        to="/"
+      >
+         Go back to sign in 
+      </Link>
     </form>
   </div>
 </div>

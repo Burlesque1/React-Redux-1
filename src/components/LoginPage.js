@@ -59,7 +59,7 @@ export class LoginPage extends React.Component {
             </form>
           </div>   
               <p>New to here? >> 
-                <Link className="list-item list-item--message" to='/signup'> Signup</Link>
+                <Link className="button button--signup" to='/signup'> Signup</Link>
               </p>   
         </div>
       </div>

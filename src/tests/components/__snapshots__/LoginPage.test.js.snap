@@ -53,7 +53,7 @@ exports[`should correctly render LoginPage 1`] = `
     <p>
       New to here? &gt;&gt;
       <Link
-        className="list-item list-item--message"
+        className="button button--signup"
         replace={false}
         to="/signup"
       >

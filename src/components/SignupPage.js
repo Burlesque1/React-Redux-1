@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { firebase } from '../firebase/firebase';
 import Popup from 'react-popup';
 import { loginWithEmail } from '../actions/auth';
@@ -40,7 +41,8 @@ export default class SignupPage extends React.Component {
                         minLength={6}
                         required
                     />          
-                    <button className="button" >Signup</button>              
+                    <button className="button" >Signup</button>    
+                    <Link className="list-item" to="/"> Go back to sign in </Link>      
                 </form>
             </div>
         </div>
