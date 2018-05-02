@@ -10,6 +10,12 @@ exports[`should correctly render ExpensesSummary with 1 expense 1`] = `
     <h1
       className="page-header__title"
     >
+      Hi, 
+       
+    </h1>
+    <h5
+      className="page-header__title"
+    >
       Viewing 
       <span>
         1
@@ -21,7 +27,7 @@ exports[`should correctly render ExpensesSummary with 1 expense 1`] = `
         $2.35
       </span>
        
-    </h1>
+    </h5>
     <div
       className="page-header__actions"
     >
@@ -47,6 +53,12 @@ exports[`should correctly render ExpensesSummary with multiple expenses 1`] = `
     <h1
       className="page-header__title"
     >
+      Hi, 
+       
+    </h1>
+    <h5
+      className="page-header__title"
+    >
       Viewing 
       <span>
         23
@@ -58,7 +70,7 @@ exports[`should correctly render ExpensesSummary with multiple expenses 1`] = `
         $235,123,409.87
       </span>
        
-    </h1>
+    </h5>
     <div
       className="page-header__actions"
     >
