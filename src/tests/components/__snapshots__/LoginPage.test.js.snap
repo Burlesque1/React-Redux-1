@@ -15,11 +15,41 @@ exports[`should correctly render LoginPage 1`] = `
     <p>
        some text 
     </p>
-    <button
-      className="button"
-    >
-      Login with Google
-    </button>
+    <div>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <input
+          autoFocus={true}
+          className="text-input"
+          onChange={[Function]}
+          placeholder="e-mail address"
+          required={true}
+          type="email"
+          value="123@123.com"
+        />
+        <input
+          className="text-input"
+          onChange={[Function]}
+          placeholder="password"
+          required={true}
+          type="password"
+          value="123456"
+        />
+        <button
+          className="button button--email"
+        >
+          Login with Email
+        </button>
+      </form>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Login with Google
+      </button>
+    </div>
   </div>
 </div>
 `;

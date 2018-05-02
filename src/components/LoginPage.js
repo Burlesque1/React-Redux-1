@@ -14,10 +14,7 @@ export class LoginPage extends React.Component {
   }
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(this.props);
-    const email = this.props.email;
-    const password = this.props.password;
-    this.props.loginWithEmail(email, password);
+    this.props.loginWithEmail(this.state.email, this.state.password);
   };
   onChange = () => {
 
@@ -61,17 +58,9 @@ export class LoginPage extends React.Component {
   }
 };
 
-const mapStateToProps = (state) => {
-  console.log('ff', state);
-  return {
-    email: '123@123.com',
-    password: '123456'
-  }
-};
-
 const mapDispatchToProps = (dispatch) => ({
   startLogin: () => dispatch(startLogin()),
   loginWithEmail: (email, password) => dispatch(loginWithEmail(email, password))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default connect(undefined, mapDispatchToProps)(LoginPage);
