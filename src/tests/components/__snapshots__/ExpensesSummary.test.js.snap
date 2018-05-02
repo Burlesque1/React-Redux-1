@@ -21,12 +21,15 @@ exports[`should correctly render ExpensesSummary with 1 expense 1`] = `
         1
          
       </span>
+       
       expense
-      totalling 
+       totalling
       <span>
         $2.35
       </span>
-       
+      , and 
+      <span />
+       more expenses hidden
     </h5>
     <div
       className="page-header__actions"
@@ -64,12 +67,15 @@ exports[`should correctly render ExpensesSummary with multiple expenses 1`] = `
         23
          
       </span>
+       
       expenses
-      totalling 
+       totalling
       <span>
         $235,123,409.87
       </span>
-       
+      , and 
+      <span />
+       more expenses hidden
     </h5>
     <div
       className="page-header__actions"
