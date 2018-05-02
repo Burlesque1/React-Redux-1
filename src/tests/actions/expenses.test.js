@@ -75,7 +75,6 @@ test('should update expense from firebase', (done) => {
 
     return database.ref(`users/${uid}/expenses/${id}`).once('value'); 
   }).then((snapshot) => {
-    console.log(id, updates, snapshot.val());
     expect(snapshot.val().amount).toBe(updates.amount);
     done();
   });
