@@ -37,9 +37,9 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(login(user.uid));
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
-      // prevent redirecting to dashboard 
-      // when refresh on other page(e.g. edit page)
       if(history.location.pathname === '/'){ 
+        // prevent redirecting to dashboard 
+        // when refresh on other page(e.g. edit page)
         history.push('/dashboard');
       }
     });

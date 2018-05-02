@@ -36,8 +36,8 @@ const mapStateToProps = (state, props) => ({
   expense: state.expenses.find((expense) => expense.id === props.match.params.id)
 });
 
-const mapDispatchToProps = (dispatch, props) => ({
-  startEditExpense: (id, expense) => dispatch(startEditExpense(id, expense)),
+const mapDispatchToProps = (dispatch) => ({
+  startEditExpense: (id, updates) => dispatch(startEditExpense(id, updates)),
   startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
 });
 
