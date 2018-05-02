@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogin, loginWithEmail } from '../actions/auth';
 
@@ -8,27 +9,32 @@ export class LoginPage extends React.Component {
     super(props);
 
     this.state = {
-      email: '123@123.com',
-      password: '123456'
+      email: 'default@default.com',
+      password: 'default'
     }
   }
   onSubmit = (e) => {
     e.preventDefault();
     this.props.loginWithEmail(this.state.email, this.state.password);
   };
-  onChange = () => {
-
+  onChange = (e) => {
+    const type = e.target.type;
+    const value = e.target.value;
+    if(type === 'email'){
+      this.setState(() => ({ email: value }));
+    } else if(type === 'password'){
+      this.setState(() => ({ password: value }));
+    }
   };
   onLogin = () => {
     this.props.startLogin();
   }
   render() {
     return (
-      // = ({ startLogin }) => (
       <div className="box-layout">
         <div className="box-layout__box">
           <h1 className="box-layout__title"> Expensify</h1>
-          <p> some text </p>
+          <p>Welcome to here!</p>
           <div>
             <form className="form" onSubmit={this.onSubmit}>
             <input
@@ -48,10 +54,13 @@ export class LoginPage extends React.Component {
                 onChange={this.onChange}
                 required
               />
-              <button className="button button--email">Login with Email</button>
-              </form>
-              <button className="button" onClick={this.onLogin}>Login with Google</button>
-          </div>      
+              <button className="button button--email">Login with Email</button>            
+              <button className="button" onClick={this.onLogin}>Login with Google</button>              
+            </form>
+          </div>   
+              <p>New to here? >> 
+                <Link className="list-item list-item--message" to='/signup'> Signup</Link>
+              </p>   
         </div>
       </div>
     )

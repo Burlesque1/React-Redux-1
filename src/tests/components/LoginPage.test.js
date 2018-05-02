@@ -13,4 +13,4 @@ test('should call startLogin on button click', () => {
     const wrapper = shallow(<LoginPage startLogin={startLogin} />);
     wrapper.find('button').at(1).simulate('click');
     expect(startLogin).toHaveBeenCalled();
-  });
+});

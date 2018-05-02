@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render SignupPage 1`] = `
+<div
+  className="box-layout"
+>
+  <div
+    className="box-layout__box"
+  >
+    <h1
+      className="box-layout__title"
+    >
+       Expensify
+    </h1>
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <input
+        autoFocus={true}
+        className="text-input"
+        placeholder="e-mail address"
+        required={true}
+        type="email"
+      />
+      <input
+        className="text-input"
+        minLength={6}
+        placeholder="password"
+        required={true}
+        type="password"
+      />
+      <button
+        className="button"
+      >
+        Signup
+      </button>
+    </form>
+  </div>
+</div>
+`;

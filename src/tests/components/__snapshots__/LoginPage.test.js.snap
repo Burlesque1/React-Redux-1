@@ -13,7 +13,7 @@ exports[`should correctly render LoginPage 1`] = `
        Expensify
     </h1>
     <p>
-       some text 
+      Welcome to here!
     </p>
     <div>
       <form
@@ -27,7 +27,7 @@ exports[`should correctly render LoginPage 1`] = `
           placeholder="e-mail address"
           required={true}
           type="email"
-          value="123@123.com"
+          value="default@default.com"
         />
         <input
           className="text-input"
@@ -35,21 +35,31 @@ exports[`should correctly render LoginPage 1`] = `
           placeholder="password"
           required={true}
           type="password"
-          value="123456"
+          value="default"
         />
         <button
           className="button button--email"
         >
           Login with Email
         </button>
+        <button
+          className="button"
+          onClick={[Function]}
+        >
+          Login with Google
+        </button>
       </form>
-      <button
-        className="button"
-        onClick={[Function]}
-      >
-        Login with Google
-      </button>
     </div>
+    <p>
+      New to here? &gt;&gt;
+      <Link
+        className="list-item list-item--message"
+        replace={false}
+        to="/signup"
+      >
+         Signup
+      </Link>
+    </p>
   </div>
 </div>
 `;
