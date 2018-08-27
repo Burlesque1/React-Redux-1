@@ -1,7 +1,7 @@
 import moment from 'moment';
 
-// Filters Reducer
-
+// Filters Reducer 
+// set default state at reducer
 const filtersReducerDefaultState = {
   text: '',
   sortBy: 'date',
