@@ -1,5 +1,4 @@
-# Expense-Management  [![Build Status](https://travis-ci.org/Burlesque1/React-Redux.svg?branch=master)](https://travis-ci.org/Burlesque1/React-Redux)
-
+# [![Build Status](https://www.travis-ci.org/Burlesque1/Expense-Management.svg?branch=master)](https://www.travis-ci.org/Burlesque1/Expense-Management)
 A expense managing app using react. </br>
 Deployed to https://react-expensify-random.herokuapp.com/
 
